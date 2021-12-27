@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins";
+  background: #22254b;
+}
+
+header {
+  background: #373b69;
+  padding: 1.3rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #eee;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+header .logo span {
+  color: rgb(143, 250, 214);
+}
+
+#search {
+  background: transparent;
+  border: 2px solid rgba(161, 160, 160, 0.377);
+  padding: 0.5rem 1rem;
+  border-radius: 3rem;
+  color: #eee;
+  outline: none;
+  transition: 0.15s;
+  font-family: inherit;
+}
+
+#search::placeholder {
+  color: rgba(238, 238, 238, 0.356);
+}
+
+#search:focus {
+  background: #22254b;
+  border: 2px solid rgb(53, 222, 252);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.movie {
+  width: 18.75rem;
+  background: #373b69;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  margin: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.movie:hover {
+  transform: scale(1.08);
+}
+
+.movie img {
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+}
+
+.movie-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem 1rem;
+  color: #eee;
+}
+
+.movie-info span {
+  background: #22254b;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.green-span {
+  color: rgb(173, 255, 47);
+}
+
+.orange-span {
+  color: rgb(255, 190, 70);
+}
+
+.red-span {
+  color: rgb(255, 45, 45);
+}
+
+.overview {
+  padding: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(100%);
+  transition: 0.3s ease-in;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background: rgba(238, 238, 238, 0.884);
+  max-height: 100%;
+  overflow: auto;
+}
+
+.overview h4 {
+  margin-bottom: 0.5rem;
+}
+
+.movie:hover .overview {
+  transform: translateY(0);
+}
+
+footer {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav button {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background: rgb(248, 22, 22);
+  border: none;
+  color: #eee;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+.nav button:active {
+  transform: translateY(2px);
+}
+
+.nav .prev-btn {
+  display: none;
+}
